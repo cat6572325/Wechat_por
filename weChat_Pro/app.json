@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/design/design",
+    "pages/personality/personality",
+    "pages/staff/staff",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fbfbfb",
+    "borderStyle": "white",
+    "selectedColor": "#d81e06",
+    "color": "#aaa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "项目",
+        "iconPath": "image/a.png",
+        "selectedIconPath": "image/a.png"
+      },
+      {
+        "text": "人员",
+        "pagePath": "pages/staff/staff",
+        "iconPath": "image/a.png",
+        "selectedIconPath": "image/a.png"
+      }
+    ]
+  },
+  "debug": true
+
+}

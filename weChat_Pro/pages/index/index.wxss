@@ -1,0 +1,61 @@
+.item_style {
+  margin: 10px;
+  width: 100%;
+  display: inline-block;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.24);
+  /*下边框，作为item的分割贱*//*可直接设置半透明*/
+}
+
+.cover_view {
+  width: 30%;
+  height: 100px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.cover_style {
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  width: 68%;
+  display: block;
+  float: right;
+  margin-bottom: 10px;
+  height: 100px;
+  /*设置成条形的，方便调试*/
+}
+
+.title_text {
+  float: left;
+  width: 100%;
+  height: 20px;
+}
+
+.title_text_1 {
+  float: left;
+  margin-top: 20px;
+  font-size: 14px;
+  width: 50%;
+  color: #ccc;
+  height: 18px;
+}
+
+.title_text_2 {
+  float: right;
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: right;
+  width: 50%;
+  color: #ccc;
+}
+
+.progress_style {
+  width: 100%;
+  /*宽度100%表示横向占一行，但受限上一级view*/
+  float: right;
+  /*浮动的表示可以使用margin等参数，不受大多数其他参数影响*/
+  margin-top: 35px;
+  height: 10px;
+}

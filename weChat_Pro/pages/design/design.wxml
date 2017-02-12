@@ -1,0 +1,19 @@
+<view class="title_style">
+  <text class="title_style_text">0元设计官网3.0</text>
+  <text class="total_text">共5张</text>
+</view>
+<view class="lower_part">
+  <view wx:for="{{lists}}" class="item_style" >
+    <image class="image_style" src="{{item.image}}" bindtap="image_click" data-index="{{index}}"></image>
+    <text class="name_style">title</text>
+  </view>
+ 
+</view>
+ <!--高清大图-->
+<view class="slideshow" hidden="{{!slideshow}}" bindtap="hide">
+    <swiper class="swiper_style"indicator-dots="true" current="{{position}}">
+      <swiper-item wx:for="{{lists}}" wx:key="{{index}}" >
+        <image src="{{item.image}}" class="slideshow" mode="aspectFit"/>
+      </swiper-item>
+    </swiper>
+  </view>
