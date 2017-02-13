@@ -1,12 +1,13 @@
-<view class="item_style">
-<view class="cover_view">
-<image class="cover_style"src="/image/a.png"></image>
-</view>
-<!-- 下方文字描述与标题 -->
-<view class="title">
-<text class="title_text">0元设计官网3.0</text>
-<text class="title_text_1">参与人员: {{ConditionOne}}</text>
-<text class="title_text_2">{{ConditionTwo}}</text>
-<progress class="progress_style"percent="{{schedule}}" stroke-width="3" color="rgba(50, 100, 250, 0.9)" active/>
-</view>
+<view class="item_style" wx:for="{{lists}}" bindtap="item_click" data-cycle="{{item.cycle}}">
+  <view class="cover_view">
+    <image class="cover_style" src="/image/a.png"></image>
+  </view>
+
+  <!-- 下方文字描述与标题 -->
+  <view class="title">
+    <text class="title_text">{{item.title}}</text>
+    <text class="title_text_1">参与人员: {{ConditionOne}}</text>
+    <text class="title_text_2" >{{item.cycle==100 ? '已完结' : '开发中'}}</text>
+    <progress class="progress_style" percent="{{item.cycle}}" stroke-width="3" color="{{item.cycle==100 ? 'rgba(255, 100, 250, 0.9)': 'rgba(50, 100, 250, 0.9)'}}" active/>
+  </view>
 </view>

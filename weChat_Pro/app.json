@@ -1,16 +1,19 @@
 {
-  "pages":[
+  "pages": [
+    "pages/progression/progression",
     "pages/index/index",
-    "pages/design/design",
     "pages/personality/personality",
+    "pages/help/help",
+    "pages/details/details",
+    "pages/design/design",
     "pages/staff/staff",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "backgroundColor": "#fbfbfb",
@@ -33,5 +36,4 @@
     ]
   },
   "debug": true
-
 }

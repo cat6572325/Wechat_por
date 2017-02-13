@@ -1,0 +1,4 @@
+.text_style
+{
+    word-wrap:break-word ;
+}

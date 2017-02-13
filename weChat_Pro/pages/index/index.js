@@ -7,7 +7,7 @@ Page({
     ConditionOne: 4,
     ConditionTwo: '开发阶段',
     schedule: 50,
-
+    lists: [{image: '/image/a.png' , title: '0元设计官网3.0',ConditionOne: 4,ConditionTwo: '开发阶段',cycle: 50},{image: '/image/a.png' , title: '0元设计官网3.0',ConditionOne: 4,ConditionTwo: '开发阶段',cycle: 100}],
     userInfo: {}
   },
   //事件处理函数
@@ -27,5 +27,9 @@ Page({
       })
       console.log(userInfo);
     })
+  },
+  item_click: function(v)
+  {
+    wx.navigateTo({ url: '/pages/details/details?cycle='+v.currentTarget.dataset.cycle})
   }
 })

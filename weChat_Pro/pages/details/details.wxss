@@ -1,0 +1,141 @@
+.first_style {
+  height: 40%;
+  min-height: 200px;
+  width: 100%;
+  border-bottom: 10px solid rgba(200, 200, 200, 0.4);
+}
+
+.inside_style {
+  height: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  border: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+.speed_view {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.cycle_view {
+  width: 100%;
+  margin-left: 40px;
+  color: rgba(200, 200, 200, 0.7);
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.stage_view {
+  width: 100%;
+  margin-left: 40px;
+  color: rgba(200, 200, 200, 0.7);
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.progress_style {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.lower_style {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 15px;
+  
+}
+.icon_style
+{
+  width: 33.25%;
+  height: 100px;
+  display: inline-block;
+  text-align: center;
+}
+.icon_image {
+  width: 50px;
+  height: 50px;
+  margin-top: 25px;
+}
+
+.icon_text {
+  width: 100%;
+  color: rgba(200, 200, 200, 0.7);
+  font-size: 13px;
+  margin-top: 10px;
+}
+.hover_I_m_click_to_gray
+{
+  /*点击效果*/
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+/*下方人员表部分*/
+.second_style
+{
+  height: 60%;
+  min-height: 500px;
+  width: 100%;
+}
+.classify_view
+{
+  width: 100%;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.item_style
+{
+  width: 100%;
+  height: 80px;
+  margin-left: 10px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.6);
+}
+.head_image
+{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-top: 20px;
+  float: left;
+}
+.item_in_middle
+{
+  margin-top: 20px;
+  float: left;
+  height: 45px;
+}
+.name_text
+{
+  margin-top: 5px;
+  display: block;
+  margin-left: 5px;
+  font-size: 14px;
+}
+.place_text
+{
+    margin-top: 5px;
+  display: block;
+  margin-left: 5px;
+  font-size: 14px;
+  color: rgba(200, 200, 200, 0.6);
+}
+.item_lower
+{
+  height: 45px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
+
+}
+.point_image
+{
+  width: 10px;
+  height: 10px;
+  margin-bottom: 2.5px;
+}
+.date_text
+{
+  margin-right: 5px;
+}

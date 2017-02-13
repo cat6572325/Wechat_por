@@ -10,7 +10,7 @@
 {
     background-color: rgba(200, 200, 200, 0.5);
     height: 100%;
-    min-height: 1000px;
+    min-height: 500px;
 }
 
 .image_style {

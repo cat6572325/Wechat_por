@@ -1,0 +1,46 @@
+<view class="first_style">
+
+  <!--内部上方项目进度-->
+  <view class="inside_style">
+    <view class="speed_view">项目进度</view>
+    <view class="cycle_view">周期 {{startDate}} ~ {{endDate}}</view>
+    <view class="stage_view" wx:if="{{cycle > 1 && cycle < 100}}">阶段 开发中</view>
+    <view class="stage_view" wx:if="{{cycle < 1}}">阶段 未开始</view>
+    <view class="stage_view" wx:if="{{cycle == 100}}">阶段 已结束</view>
+    <progress class="progress_style" percent="{{cycle}}" stroke-width="10" color="rgba(50, 100, 250, 0.9)" active/>
+  </view>
+
+  <!--内部下方开发文档等-->
+  <view class="lower_style">
+    <view class="icon_style" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="design_click">
+      <image class="icon_image" src="/image/a.png"></image>
+      <view class="icon_text">设计图</view>
+    </view>
+    <view class="icon_style" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="help_click">
+      <image class="icon_image" src="/image/a.png"></image>
+      <view class="icon_text">开发文档</view>
+    </view>
+    <view class="icon_style" hover-class="hover_I_m_click_to_gray" hover="true">
+      <image class="icon_image" src="/image/a.png"></image>
+      <view class="icon_text">设计图</view>
+    </view>
+  </view>
+</view>
+
+<!--下方第二部分ui-->
+<view class="second_style">
+<view class="classify_view">参与人员(2/4)</view>
+<!--人员列表-->
+<view class="item_style" wx:for="lists}}" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="item_click">
+<image class="head_image"src="/image/a.png"></image>
+<view class="item_in_middle">
+<text class="name_text">名称</text>
+<text class="place_text">前端开发</text>
+</view>
+<view class="item_lower">
+<image class="point_image"src="/image/a.png"></image>
+<text class="date_text">工作中</text>
+
+</view>
+</view>
+</view>

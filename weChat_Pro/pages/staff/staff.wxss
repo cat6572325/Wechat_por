@@ -12,6 +12,8 @@
     margin-top: 20px;
     margin-left: 15px;
     float: left;
+    position: relative;
+    /*相对于*/
 }
 .point_image
 {
@@ -21,7 +23,8 @@
     left: 0;
     margin-left: 40px;
     margin-top: 50px;
-    position: fixed;
+    position: absolute;
+    /*相对于*/
 }
 .nickname_text
 {

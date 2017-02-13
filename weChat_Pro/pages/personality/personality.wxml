@@ -12,11 +12,9 @@
   <view class="place_view">担当</view>
   </view>
 
-  <view class="explain_style">
+<view class="explain_style">
   <image class="icon_image"src="/image/a.png" mode="aspectFit"></image>
-  <view class="place_view">
- 担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当担当
-  </view>
+  <view class="place_view">担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当</view>
   </view>
   </view>
 </view>
