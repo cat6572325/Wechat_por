@@ -1,0 +1,39 @@
+<view style="height: {{winHeight}}px;width: {{winWidth}}px">
+
+  <!--第一部分-->
+  <view class="first_style">
+    <view class="first_top">
+      <text class="first_title_text">0元设计官网3.0</text>
+      <text class="backstate_mg_text">后台管理</text>
+    </view>
+    <view class="first_lower">
+      <text class="progression_text">2017 ~ 2018</text>
+      <text class="overdays_text">截止时间还有</text>
+      <text class="overdays_figure_text">3</text>
+      <text class="overdays_text">天</text>
+    </view>
+  </view>
+
+  <!--第二部分-->
+  <view class="second_style">
+    <view class="classify_view">阶段进度(2/4)</view>
+
+    <!--人员列表-->
+    <view class="item_style" wx:for="lists}}" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="item_click">
+      <radio class="head_image" src="/image/a.png"></radio>
+      <view class="item_in_middle">
+        <text class="name_text">名称</text>
+      </view>
+    </view>
+  </view>
+
+  <!--第三部分-->
+  <view class="third_style">
+    <text class="third_top_text">某某公司</text>
+    <view class="third_lower">
+      <image class="third_lower_image" src="/image/a.png"></image>
+      <text class="third_lower_text">名称</text>
+      <label style="display: block">sdasda</label>
+    </view>
+  </view>
+</view>

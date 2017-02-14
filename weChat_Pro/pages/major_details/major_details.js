@@ -1,8 +1,7 @@
-// pages/progression/progression.js
+// pages/major_details/major_details.js
 Page({
   data:{
-    currentTab: 0,
-    winWidth: 0,
+        winWidth: 0,
     winHeight: 0,
   },
   onLoad:function(options){
@@ -24,10 +23,10 @@ Page({
   onShow:function(){
     // 页面显示
   },
-  // 滑动切换tab 
-  bindChange: function (e) {
-    console.log(e)
-    var that = this;
-    that.setData({ currentTab: e.detail.current });
+  onHide:function(){
+    // 页面隐藏
+  },
+  onUnload:function(){
+    // 页面关闭
   }
 })

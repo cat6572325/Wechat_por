@@ -1,8 +1,14 @@
+<view class="state_style" wx:if="{{iswho==1}}">
+  <view class="frame_style {{isState ? 'switch_selected' : ''}}" >
+  <text class="state_text">状态</text>
+  <image class="state_image"src="/image/a.png"></image>
+  <switch class="state_switch"type="switch" bindchange="switch_Change"/>
+  </view>
+</view>
 <view class="item_style" wx:for="{{lists}}" bindtap="item_click" data-cycle="{{item.cycle}}">
   <view class="cover_view">
     <image class="cover_style" src="/image/a.png"></image>
   </view>
-
   <!-- 下方文字描述与标题 -->
   <view class="title">
     <text class="title_text">{{item.title}}</text>
@@ -11,3 +17,7 @@
     <progress class="progress_style" percent="{{item.cycle}}" stroke-width="3" color="{{item.cycle==100 ? 'rgba(255, 100, 250, 0.9)': 'rgba(50, 100, 250, 0.9)'}}" active/>
   </view>
 </view>
+
+
+<modal  confirm-text="客户" hidden="{{!hidemodal}}"  bindconfirm="hide_modal" cancel-text="开发者"bindcancel="cancel_modal">
+</modal>

@@ -20,9 +20,9 @@
       <image class="icon_image" src="/image/a.png"></image>
       <view class="icon_text">开发文档</view>
     </view>
-    <view class="icon_style" hover-class="hover_I_m_click_to_gray" hover="true">
+    <view class="icon_style" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="progression_click">
       <image class="icon_image" src="/image/a.png"></image>
-      <view class="icon_text">设计图</view>
+      <view class="icon_text">阶段详情</view>
     </view>
   </view>
 </view>

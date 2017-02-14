@@ -1,36 +1,77 @@
-
-.first_style
-{
+.first_style {
   width: 100%;
   height: 20%;
   min-height: 100px;
 }
-.left_image
-{
+
+.left_image {
   width: 40%;
   height: 50px;
   margin-left: 25px;
   margin-top: 25px;
 }
-.progression_text
-{
+
+.progression_text {
   width: 50%;
   float: right;
   margin-top: 40px;
 }
-.swiper-box
+.second_style
 {
+  /*background-color: rgba(200, 200, 200, 0.5);*/
+  min-height: 400px;
+}
+.personality_view
+{
+  margin: 20px;
+}
+.tab_view {
+  width: 33.25%;
+  display: inline-block;
+  height: 50px;
+}
 
+.on {
+  color: rgba(0, 0, 180, 0.6);
+  border-bottom: 5rpx solid rgba(0, 0, 180, 0.6);
+  padding-bottom: 5px;
+  font-size: 17px;
 }
 .swiper-tab {
+  /*在tab标签未被选中的风格*/
   width: 100%;
   text-align: center;
   line-height: 80rpx;
   display: inline-block;
+  color: #ccc;
+
 }
-.swiper-tab-list {
-  font-size: 30rpx;
-  display: inline-block;
-  margin-left: 10px;
-  color: #777;
+.swiper-box
+{
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.swi_item
+{
+text-align: center;
+}
+.swi_item_view
+{
+  text-align: center;
+  padding-top: 10px;
+  height: 100%;
+}
+.swi_item_outside
+{
+max-width: 250px;
+min-height: 300px;
+margin-top: 10px;
+border-radius: 3%;
+margin: 0 auto;
+box-shadow:-10px 15px 10px rgba(200, 200, 200, 0.2), /*左边阴影*/  
+    10px 15px 10px rgba(200, 200, 200, 0.2), /*右边阴影*/  
+    0 1px 10px rgba(200, 200, 200, 0.2), /*顶部阴影*/  
+    0 25px 25px rgba(200, 200, 200, 0.3); /*底边阴影*/
 }

@@ -1,0 +1,129 @@
+.first_style {
+  width: 100%;
+  height: 40%;
+  border-bottom: 4px solid rgba(200, 200, 200, 0.5);
+}
+
+.first_top {
+  width: 100%;
+  height: 60%;
+  background-color: rgba(60, 130, 255, 1);
+  text-align: center;
+}
+
+.first_title_text {
+  margin: 0 auto;
+  display: block;
+  margin-top: 15%;
+  color: #fff;
+}
+
+.backstate_mg_text {
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*上部第二分部*/
+
+.first_lower {
+  width: 100%;
+  height: 40%;
+}
+
+.progression_text {
+  display: block;
+  margin-top: 10%;
+  margin-left: 20px;
+  font-size: 15px;
+  color: rgba(100, 100, 100, 0.7);
+}
+
+.overdays_text {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  color: rgba(100, 100, 100, 0.7);
+}
+
+.overdays_figure_text {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  color: rgba(255, 0, 0, 0.7);
+}
+
+/*下方人员表部分*/
+
+.second_style {
+  height: 30%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.classify_view {
+  width: 100%;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.item_style {
+  width: 100%;
+  height: 60px;
+  margin-left: 10px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.6);
+}
+
+.head_image {
+  border-radius: 50%;
+  margin-top: 17.5px;
+  float: left;
+}
+
+.item_in_middle {
+  margin-top: 20px;
+  float: left;
+}
+
+.name_text {
+  margin-top: 5px;
+  display: block;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+/*第三部分样式*/
+
+.third_style {
+  width: 100%;
+  height: 30%;
+}
+
+.third_top_text {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.third_lower {
+  width: 100%;
+  height: 60px;
+  margin-left: 25px;
+}
+
+.third_lower_image {
+  border-radius: 50%;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+.third_lower_text {
+  margin-top: 22.5px;
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 14px;
+
+}

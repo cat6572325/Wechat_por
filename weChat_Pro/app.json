@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/progression/progression",
     "pages/index/index",
+    "pages/selecte/selecte",
+    "pages/major_details/major_details",
+    "pages/progression/progression",
     "pages/personality/personality",
     "pages/help/help",
     "pages/details/details",

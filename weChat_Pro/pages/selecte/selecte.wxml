@@ -1,0 +1,2 @@
+<button bindtap="customer">进入客户版</button>
+<button bindtap="developer">进入开发者</button>
