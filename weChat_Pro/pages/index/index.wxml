@@ -1,4 +1,4 @@
-<view class="state_style" wx:if="{{iswho==1}}">
+<!--<view class="state_style" wx:if="{{iswho==1}}">
   <view class="frame_style {{isState ? 'switch_selected' : ''}}" >
   <text class="state_text">状态</text>
   <image class="state_image"src="/image/a.png"></image>
@@ -9,7 +9,7 @@
   <view class="cover_view">
     <image class="cover_style" src="/image/a.png"></image>
   </view>
-  <!-- 下方文字描述与标题 -->
+  <!-- 下方文字描述与标题 
   <view class="title">
     <text class="title_text">{{item.title}}</text>
     <text class="title_text_1">参与人员: {{ConditionOne}}</text>
@@ -20,4 +20,27 @@
 
 
 <modal  confirm-text="客户" hidden="{{!hidemodal}}"  bindconfirm="hide_modal" cancel-text="开发者"bindcancel="cancel_modal">
-</modal>
+</modal>-->
+
+
+<view class="container">
+  <view class="filters">
+    <text 
+      wx:for="{{filters}}" 
+      bindtap="applyFilter" 
+      id="{{item.key}}" 
+      class="{{visibilityFilter == item.key ? 'active' : ''}}"
+    >{{item.text}}</text>
+  </view>
+
+  <view class="todos">
+    <view wx:for="{{todos}}" class="todo-item {{item.completed ? 'completed' : ''}}" id="{{item.id}}" bindtap="handleCheck">
+      <icon type="{{item.completed ? 'success_circle' : 'circle'}}" size="18"/> {{item.text}}
+    </view>
+  </view>
+   
+  <form class="add-todo" bindsubmit="addTodo">
+    <input name="todo" class="todo-input" placeholder="点击添加"/>
+    <button formType="submit">完成</button>
+  </form>
+</view>

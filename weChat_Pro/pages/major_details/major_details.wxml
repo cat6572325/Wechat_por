@@ -18,9 +18,9 @@
   <view class="second_style">
     <view class="classify_view">阶段进度(2/4)</view>
 
-    <!--人员列表-->
-    <view class="item_style" wx:for="lists}}" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="item_click">
-      <radio class="head_image" src="/image/a.png"></radio>
+    <!--bug修复项-->
+    <view class="item_style" wx:for="lists}}" >
+      <checkbox  class="head_image" checked="radio_click"></checkbox>
       <view class="item_in_middle">
         <text class="name_text">名称</text>
       </view>
