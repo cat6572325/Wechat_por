@@ -3,13 +3,13 @@
   <!--第一部分-->
   <view class="first_style">
     <view class="first_top">
-      <text class="first_title_text">0元设计官网3.0</text>
+      <text class="first_title_text">{{title}}</text>
       <text class="backstate_mg_text">后台管理</text>
     </view>
     <view class="first_lower">
-      <text class="progression_text">2017 ~ 2018</text>
+      <text class="progression_text">{{timeIn}} ~ {{timeTo}}</text>
       <text class="overdays_text">截止时间还有</text>
-      <text class="overdays_figure_text">3</text>
+      <text class="overdays_figure_text">{{date}}</text>
       <text class="overdays_text">天</text>
     </view>
   </view>
@@ -19,10 +19,10 @@
     <view class="classify_view">阶段进度(2/4)</view>
 
     <!--bug修复项-->
-    <view class="item_style" wx:for="lists}}" >
+    <view class="item_style" wx:for="{{lists}}" >
       <checkbox  class="head_image" checked="radio_click"></checkbox>
       <view class="item_in_middle">
-        <text class="name_text">名称</text>
+        <text class="name_text">{{item}}</text>
       </view>
     </view>
   </view>
@@ -33,7 +33,7 @@
     <view class="third_lower">
       <image class="third_lower_image" src="/image/a.png"></image>
       <text class="third_lower_text">名称</text>
-      <label style="display: block">sdasda</label>
+
     </view>
   </view>
 </view>

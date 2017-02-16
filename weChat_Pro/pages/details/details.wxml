@@ -31,11 +31,11 @@
 <view class="second_style">
 <view class="classify_view">参与人员(2/4)</view>
 <!--人员列表-->
-<view class="item_style" wx:for="lists}}" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="item_click">
-<image class="head_image"src="/image/a.png"></image>
+<view class="item_style" wx:for="{{lists}}" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="item_click">
+<image class="head_image"src="{{item.head_pic}}"></image>
 <view class="item_in_middle">
-<text class="name_text">名称</text>
-<text class="place_text">前端开发</text>
+<text class="name_text">{{name}}</text>
+<text class="place_text">{{item.place}}</text>
 </view>
 <view class="item_lower">
 <image class="point_image"src="/image/a.png"></image>

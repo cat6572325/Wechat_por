@@ -1,7 +1,9 @@
+const {createStore} = require('./test_lib/redux.js');
+const reducer = require('./reducers/index.js');
+const store = createStore(reducer) // redux store
 const {Provider} = require('./test_lib/wechat-weapp-redux.js');
 const configureStore = require('./configureStore.js');
-
-App(Provider(configureStore())({
+App(Provider(store)({
 
     onLaunch: function () {
       //调用API从本地缓存中获取数据
@@ -30,4 +32,8 @@ App(Provider(configureStore())({
     globalData: {
       userInfo: null
     }
-  }))
+    
+  })
+  
+  )
+  

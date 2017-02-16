@@ -1,29 +1,27 @@
-<!--<view class="state_style" wx:if="{{iswho==1}}">
-  <view class="frame_style {{isState ? 'switch_selected' : ''}}" >
-  <text class="state_text">状态</text>
-  <image class="state_image"src="/image/a.png"></image>
-  <switch class="state_switch"type="switch" bindchange="switch_Change"/>
+<view class="state_style" wx:if="{{iswho==1}}">
+  <view class="frame_style {{isState ? 'switch_selected' : ''}}">
+    <text class="state_text">状态</text>
+    <image class="state_image" src="/image/a.png"></image>
+    <switch class="state_switch" type="switch" bindchange="switch_Change" />
   </view>
 </view>
-<view class="item_style" wx:for="{{lists}}" bindtap="item_click" data-cycle="{{item.cycle}}">
+<view class="item_style" wx:for="{{lists}}" bindtap="item_click" data-cycle="{{item.cycle}}" data-title="{{item.title}}" data-pid="{{item._id}}">
   <view class="cover_view">
-    <image class="cover_style" src="/image/a.png"></image>
+    <image class="cover_style" src="{{item.picture}}"></image>
   </view>
-  <!-- 下方文字描述与标题 
+
+  <!-- 下方文字描述与标题 -->
   <view class="title">
     <text class="title_text">{{item.title}}</text>
-    <text class="title_text_1">参与人员: {{ConditionOne}}</text>
-    <text class="title_text_2" >{{item.cycle==100 ? '已完结' : '开发中'}}</text>
-    <progress class="progress_style" percent="{{item.cycle}}" stroke-width="3" color="{{item.cycle==100 ? 'rgba(255, 100, 250, 0.9)': 'rgba(50, 100, 250, 0.9)'}}" active/>
+    <text class="title_text_1">参与人员: {{item.quantity}} 人</text>
+    <text class="title_text_2">{{item.progression}}</text>
+    <progress class="progress_style" percent="{{item.progress}}" stroke-width="3" color="{{item.cycle==100 ? 'rgba(255, 100, 250, 0.9)': 'rgba(50, 100, 250, 0.9)'}}" active/>
   </view>
 </view>
+<modal confirm-text="客户" hidden="{{!hidemodal}}" bindconfirm="hide_modal" cancel-text="开发者" bindcancel="cancel_modal">
+</modal>
 
-
-<modal  confirm-text="客户" hidden="{{!hidemodal}}"  bindconfirm="hide_modal" cancel-text="开发者"bindcancel="cancel_modal">
-</modal>-->
-
-
-<view class="container">
+<!--<view class="container">
   <view class="filters">
     <text 
       wx:for="{{filters}}" 
@@ -32,7 +30,6 @@
       class="{{visibilityFilter == item.key ? 'active' : ''}}"
     >{{item.text}}</text>
   </view>
-
   <view class="todos">
     <view wx:for="{{todos}}" class="todo-item {{item.completed ? 'completed' : ''}}" id="{{item.id}}" bindtap="handleCheck">
       <icon type="{{item.completed ? 'success_circle' : 'circle'}}" size="18"/> {{item.text}}
@@ -41,6 +38,6 @@
    
   <form class="add-todo" bindsubmit="addTodo">
     <input name="todo" class="todo-input" placeholder="点击添加"/>
-    <button formType="submit">完成</button>
+    <button  bindtap="d"formType="submit">完成</button>
   </form>
-</view>
+</view>-->
