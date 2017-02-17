@@ -20,20 +20,20 @@
   "tabBar": {
     "backgroundColor": "#fbfbfb",
     "borderStyle": "white",
-    "selectedColor": "#d81e06",
+    "selectedColor": "#1976d2",
     "color": "#aaa",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "项目",
-        "iconPath": "image/a.png",
-        "selectedIconPath": "image/a.png"
+        "iconPath": "image/home_gray.png",
+        "selectedIconPath": "image/home.png"
       },
       {
         "text": "人员",
         "pagePath": "pages/staff/staff",
-        "iconPath": "image/a.png",
-        "selectedIconPath": "image/a.png"
+        "iconPath": "image/member.png",
+        "selectedIconPath": "image/member_selected.png"
       }
     ]
   },

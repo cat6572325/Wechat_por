@@ -1,11 +1,11 @@
 <view class="state_style" wx:if="{{iswho==1}}">
   <view class="frame_style {{isState ? 'switch_selected' : ''}}">
     <text class="state_text">状态</text>
-    <image class="state_image" src="/image/a.png"></image>
+    <image class="{{userState == true ? 'point-3' : 'state_image'}}" ></image>
     <switch class="state_switch" type="switch" bindchange="switch_Change" />
   </view>
 </view>
-<view class="item_style" wx:for="{{lists}}" bindtap="item_click" data-cycle="{{item.cycle}}" data-title="{{item.title}}" data-pid="{{item._id}}">
+<view class="item_style" wx:for="{{lists}}" bindtap="item_click" data-cycle="{{item.cycle}}" data-title="{{item.title}}" data-pid="{{item._id}}" data-progression="{{item.progression}}">
   <view class="cover_view">
     <image class="cover_style" src="{{item.picture}}"></image>
   </view>
@@ -14,7 +14,7 @@
   <view class="title">
     <text class="title_text">{{item.title}}</text>
     <text class="title_text_1">参与人员: {{item.quantity}} 人</text>
-    <text class="title_text_2">{{item.progression}}</text>
+    <text class="title_text_2">{{item.progression2}}</text>
     <progress class="progress_style" percent="{{item.progress}}" stroke-width="3" color="{{item.cycle==100 ? 'rgba(255, 100, 250, 0.9)': 'rgba(50, 100, 250, 0.9)'}}" active/>
   </view>
 </view>

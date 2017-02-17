@@ -4,7 +4,7 @@
   <view class="inside_style">
     <view class="speed_view">项目进度</view>
     <view class="cycle_view">周期 {{startDate}} ~ {{endDate}}</view>
-    <view class="stage_view" wx:if="{{cycle > 1 && cycle < 100}}">阶段 开发中</view>
+    <view class="stage_view" wx:if="{{cycle > 1 && cycle < 100}}">阶段 {{progression2}}</view>
     <view class="stage_view" wx:if="{{cycle < 1}}">阶段 未开始</view>
     <view class="stage_view" wx:if="{{cycle == 100}}">阶段 已结束</view>
     <progress class="progress_style" percent="{{cycle}}" stroke-width="10" color="rgba(50, 100, 250, 0.9)" active/>
@@ -13,15 +13,15 @@
   <!--内部下方开发文档等-->
   <view class="lower_style">
     <view class="icon_style" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="design_click">
-      <image class="icon_image" src="/image/a.png"></image>
+      <image class="icon_image" mode="aspectFit" src="/image/development-icon.png"></image>
       <view class="icon_text">设计图</view>
     </view>
     <view class="icon_style" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="help_click">
-      <image class="icon_image" src="/image/a.png"></image>
+      <image class="icon_image" mode="aspectFit" src="/image/ui-icon.png"></image>
       <view class="icon_text">开发文档</view>
     </view>
     <view class="icon_style" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="progression_click">
-      <image class="icon_image" src="/image/a.png"></image>
+      <image class="icon_image" mode="aspectFit" src="/image/stage-icon.png"></image>
       <view class="icon_text">阶段详情</view>
     </view>
   </view>
@@ -34,11 +34,11 @@
 <view class="item_style" wx:for="{{lists}}" hover-class="hover_I_m_click_to_gray" hover="true" bindtap="item_click">
 <image class="head_image"src="{{item.head_pic}}"></image>
 <view class="item_in_middle">
-<text class="name_text">{{name}}</text>
+<text class="name_text">名称 {{name}}</text>
 <text class="place_text">{{item.place}}</text>
 </view>
 <view class="item_lower">
-<image class="point_image"src="/image/a.png"></image>
+<image class="point_image"></image>
 <text class="date_text">工作中</text>
 
 </view>

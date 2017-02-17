@@ -8,6 +8,7 @@ const {addTodo, setVisibilityFilter, toggleTodo} = require('../actions/index.js'
 // 在页面的定义上使用connect,绑定redux store到页面上。
 const pageConfig = {
   data: {
+    userState: false,
     todos: [],
     filters: [{ key: 'SHOW_ALL', text: '全部' }, { key: 'SHOW_ACTIVE', text: '正在进行' }, { key: 'SHOW_COMPLETED', text: '已完成' }],
     ConditionOne: 4,
@@ -16,7 +17,7 @@ const pageConfig = {
     isState: false, //是否在线
     iswho: 0,
     hidemodal: true,
-    lists: [{ progression: '开始', title: '0元设计官网3.0',picture: '/image/a.png',_id: '58a1285842f6830ec0862b3f',quantity: '10' }],
+    lists: [{ progression: '开始', title: '0元设计官网3.0', picture: '/image/a.png', _id: '58a1285842f6830ec0862b3f', quantity: '10' }],
     userInfo: {}
   },
   //事件处理函数
@@ -41,86 +42,92 @@ const pageConfig = {
     //调用登录接口
 
 
-      wx.login({
-        success: function (res) {
-          mcode = res.code;
-          wx.getUserInfo({
-            success: function (res) {
-              console.log(res)
-              miv = res.iv;
-              encrypteddata = res.encryptedData;
-              wx.showToast({
-                title: res.userInfo.nickName,
-                icon: 'loading',
-                duration: 2000
-              })
-              wx.request({
-                url: 'http://033503a6.ngrok.io/session',
-                data: {
-                  code: mcode,
-                  iv: miv,
-                  newteo: '75c7f6343b26609d58160ae8e13c3c5a0e2847fd',
-                  encryptedData: encrypteddata
-                },
-                method: 'GET',
-                success: function (res) {
-                  console.log(res)
-                  // 将token保存至缓存
-                  wx.setStorageSync('token', res.data.token)
-                  that.projects()
+    wx.login({
+      success: function (res) {
+        mcode = res.code;
+        wx.getUserInfo({
+          success: function (res1) {
+            miv = res1.iv;
+            encrypteddata = res1.encryptedData;
 
-                },
-                fail: function (get_data_faild) {
-                  var error = get_data_faild.data
-                  wx.showToast({
-                    title: error,
-                    icon: 'error',
-                    duration: 50000
-                  })
-                },
-              })
-            }
-          })
-        },
-        fail: function (login_faild) {
-          console.log(login_faild.errMsg)
-          that.setData({
-            failData: login_faild.data
-          })
-        },
-      })
+            wx.showToast({
+              title: res1.userInfo.nickName,
+              icon: 'loading',
+              duration: 2000
+            })
+            //登陆授权
+            wx.request({
+              url: 'http://api.cbinbin.xyz/session',
+              data: {
+                code: mcode,
+                iv: miv,
+                newteo: '75c7f6343b26609d58160ae8e13c3c5a0e2847fd',
+                encryptedData: encrypteddata
+              },
+              method: 'GET',
+              success: function (res2) {
+                console.log(res2)
+                // 将token保存至缓存
+                wx.setStorageSync('token', res2.data.token)
+                that.projects()
+
+              },
+              fail: function (get_data_faild) {
+                var error = get_data_faild.data
+                wx.showToast({
+                  title: error,
+                  icon: 'error',
+                  duration: 50000
+                })
+              },
+            })
+          }
+        })
+      },
+      fail: function (login_faild) {
+        console.log(login_faild.errMsg)
+        that.setData({
+          failData: login_faild.data
+        })
+      },
+    })
     //如果有token
   },
   projects: function () {
     // 查看项目列表
     var that = this;
-    var url = 'http://033503a6.ngrok.io/project?token=' + wx.getStorageSync('token');
+    var url = 'http://api.cbinbin.xyz/project?token=' + wx.getStorageSync('token');
+    console.log(url)
+    //获取项目列表
     wx.request({
       url: url,
       method: 'GET',
       success: function (res) {
         console.log(res.data)
         that.setData({
+
           lists: res.data.map((v) => {
             // 获取参与人员总数并增加一个progress整数变量
-            var total=v.developers.backEnd.length+v.developers.backstage.length+v.developers.frontEnd.length;
-            var pgs;
-            if(v.progression=='start')
-           {pgs=100/5;v.progression="开始"}
-            if(v.progression=='pending')
-            {pgs=0;v.progression="未开始"}
-            if(v.progression=='going')
-          {pgs=(100/5)*2;v.progression="进行中"}
-            if(v.progression=='check')
-            {pgs=(100/5)*3;v.progression="准备上线"}
-            if(v.progression=='finish')
-            {pgs=100;v.progression="已结束"}
-                return Object.assign(v, { quantity: total,progres: pgs})//修改列表item中的内容，每个item增加三个参数
-              })
+            var total = v.developers.backEnd.length + v.developers.backstage.length + v.developers.frontEnd.length;
+            var pgs, progression2;
+            if (v.progression == 'start') {
+              pgs = 100 / 5; //设置item进度条
+              progression2 = "开始" //设置item阶段说明
+            }
+            if (v.progression == 'pending')
+            { pgs = 0; progression2 = "未开始" }
+            if (v.progression == 'going')
+            { pgs = (100 / 5) * 2; progression2 = "进行中" }
+            if (v.progression == 'check')
+            { pgs = (100 / 5) * 3; progression2 = "准备上线" }
+            if (v.progression == 'finish')
+            { pgs = 100; progression2 = "已结束" }
+            return Object.assign(v, { quantity: total, progres: pgs, progression2: progression2 })//修改列表item中的内容，每个item增加三个参数
+          })
         })
       },
       fail: function (get_data_faild) {
-        
+
         wx.showToast({
           title: get_data_faild.data.errMsg,
           icon: 'error',
@@ -133,12 +140,20 @@ const pageConfig = {
 
   item_click: function (v) {
     var dat = wx.getStorageSync('iswho')
-    var pid= v.currentTarget.dataset.pid;
+    var pid = v.currentTarget.dataset.pid;
+
     console.log(v)
     if (dat == 'developer') {
-      wx.navigateTo({ url: '/pages/major_details/major_details?cycle=' + v.currentTarget.dataset.cycle+'&title='+v.target.dataset.title+'&pid='+pid })
+      // 项目名 时间 tasktabs 项目id 公司名 客户名 客户头像
+      // 传递项目id和项目进度方便获取项目详情
+      wx.navigateTo({ url: '/pages/major_details/major_details?&pid=' + pid + '&progression=' + v.currentTarget.dataset.progression })
     } else {
-      wx.navigateTo({ url: '/pages/details/details?cycle=' + v.currentTarget.dataset.cycle+'&title='+v.target.dataset.title+'&pid='+pid})
+      // 后期 阶段 参与人员 项目id
+      wx.navigateTo({
+        url: '/pages/details/details?pid='
+        + v.currentTarget.dataset.pid + '&progression='
+        + v.currentTarget.dataset.progression
+      })
     }
   },
   switch_Change: function (v) {

@@ -3,7 +3,7 @@
     min-height: 200px;
     width: 100%;
     text-align: center;
-    border-bottom: 1px solid rgba(100, 100, 100, 0.2)
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
 }
 .head_style
 {
@@ -21,12 +21,19 @@
 {
     margin-top: 20px;
     width: 100%;
+    font-family: PingFangSC;
+	font-size: 20px;
+	font-weight: 500;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.87);
 }
 .personality_view
 {
     width: 100%;
     margin-top: 10px;
-    color: rgba(100, 100, 100, 0.4);
+    font-family: PingFangSC;
+	font-size: 14.5px;
+	color: rgba(0, 0, 0, 0.38);
 }
 
 .second_style
@@ -50,11 +57,13 @@
 }
 .place_view
 {
-    border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
     float: right;
     margin-top: 15px;
    min-height: 35px;
     width: 85%;
-    color: rgba(0, 0, 0, 0.6);
     word-wrap:break-word ;
+    font-family: PingFangSC;
+	font-size: 18.5px;
+	color: rgba(0, 0, 0, 0.54);
 }

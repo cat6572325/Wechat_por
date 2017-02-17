@@ -2,8 +2,14 @@
 <image  class="left_image"src="/image/a.png" mode="aspectFit"></image>
 <view class="progression_text"> 开发阶段 </view>
 </view>
+<!--开始 start-->
+<view class="second_style" style="height: {{winHeight}}px"></view>
+<view class="personality_view">{{progressionT}} </view>
+<view class="personality_view"> 该项目工作包含以下 </view>
+
+<!--进行中-->
 <view class="second_style"style="height: {{winHeight}}px">
-<view class="personality_view"> 该项目已进入开发阶段 </view>
+<view class="personality_view"> 该项目已进入开发阶段{{progressionT}} </view>
 
 <view class="swiper-tab" >
   <view  class="tab_view"bindtap="swichNav">
