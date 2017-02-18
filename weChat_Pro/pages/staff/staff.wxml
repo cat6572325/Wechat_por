@@ -1,6 +1,6 @@
 <view class="item_style" wx:for="ssss}}"bindtap="item_click" hover-class="hover_I_m_click_to_gray" hover="true">
 <image class="head_image"src="/image/a.png"></image>
-<image class="point_image"></image>
-<text class="nickname_text">奥村</text>
-<text class="explain_text">担当</text>
+<image class="point_image" ></image>
+<text class="nickname_text">名称</text>
+<text class="explain_text">职位</text>
 </view>

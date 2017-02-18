@@ -10,12 +10,32 @@ Page({
     progression: '',
     progression2: '',
     Project_Id: '',
+      winWidth: 0,
+    winHeight: 0,
+  
     lists: [{ place: '前端', name: 'computer', head_pic: '/image/a.png', cycle: 20 }]
   },
   onLoad: function (options) {
+      var that=this;
+    // 获取系统信息 
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData(
+          {
+            winWidth: res.windowWidth,
+            winHeight: res.windowHeight
+          });
+      }
+    });
      this.loadData(options)
+
   },
   loadData: function (v) {
+     wx.showToast({
+              title: '加载中',
+              icon: 'loading',
+              duration: 10000
+            })
     var that = this;
     var time1,time2
     that.setData({
@@ -72,7 +92,7 @@ Page({
           })
     
         }
-
+wx.hideToast()
       },
 
       fail: function (get_data_faild) {

@@ -6,10 +6,8 @@
 }
 
 .inside_style {
-  margin-left: 40px;
-  margin-right: 40px;
   margin-top: 20px;
-  width: 317.5px;
+  width: 100%;
   height: 115.5px;
   background-color: #fff;
   box-shadow: 0 0.5px 2px 0 rgba(0, 0, 0, 0.2);

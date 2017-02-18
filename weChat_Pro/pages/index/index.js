@@ -53,7 +53,7 @@ const pageConfig = {
             wx.showToast({
               title: res1.userInfo.nickName,
               icon: 'loading',
-              duration: 2000
+              duration: 10000
             })
             //登陆授权
             wx.request({
@@ -77,7 +77,7 @@ const pageConfig = {
                 wx.showToast({
                   title: error,
                   icon: 'error',
-                  duration: 50000
+                  duration: 10000
                 })
               },
             })

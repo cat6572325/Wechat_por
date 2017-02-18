@@ -1,69 +1,66 @@
-.first_style
-{
-    min-height: 200px;
-    width: 100%;
-    text-align: center;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
-}
-.head_style
-{
-    width: 100%;
-}
-.head_image
-{
-    width: 50px;
-    height: 50px;
-    margin-top: 50px;
-    border-radius: 50%;
-
-}
-.nickname_view
-{
-    margin-top: 20px;
-    width: 100%;
-    font-family: PingFangSC;
-	font-size: 20px;
-	font-weight: 500;
-	text-align: center;
-	color: rgba(0, 0, 0, 0.87);
-}
-.personality_view
-{
-    width: 100%;
-    margin-top: 10px;
-    font-family: PingFangSC;
-	font-size: 14.5px;
-	color: rgba(0, 0, 0, 0.38);
+.first_style {
+  min-height: 200px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
 }
 
-.second_style
-{
-      min-height: 500px;
-      height: 100%;
-    width: 100%;
+.head_style {
+  width: 100%;
 }
-.explain_style
-{
-    width: 100%;
-    margin: 15px;
-    height: 100%;
-    display: inline-block;
 
+.head_image {
+  width: 50px;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 50%;
 }
-.icon_image
-{
-    width: 40px;
-    height: 40px;
+
+.nickname_view {
+  margin-top: 20px;
+  width: 100%;
+  font-family: PingFangSC;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
 }
-.place_view
-{
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
-    float: right;
-    margin-top: 15px;
-   min-height: 35px;
-    width: 85%;
-    word-wrap:break-word ;
-    font-family: PingFangSC;
-	font-size: 18.5px;
-	color: rgba(0, 0, 0, 0.54);
+
+.personality_view {
+  width: 100%;
+  margin-top: 10px;
+  font-family: PingFangSC;
+  font-size: 14.5px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.second_style {
+  min-height: 500px;
+  height: 100%;
+  width: 100%;
+}
+
+.explain_style {
+  width: 100%;
+  margin-top: 15px;
+  height: 100%;
+  display: inline-block;
+}
+
+.icon_image {
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+}
+
+.place_view {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
+  float: right;
+  margin-top: 15px;
+  min-height: 35px;
+  width: 85%;
+  word-wrap: break-word;
+  font-family: PingFangSC;
+  font-size: 18.5px;
+  color: rgba(0, 0, 0, 0.54);
 }

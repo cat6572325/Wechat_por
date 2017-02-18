@@ -1,20 +1,20 @@
-<view>
+<view style="height:{{winHeight}}px, width:{{winWidth}}px">
   <view class="first_style">
   <view class="head_style">
     <image class="head_image"src="/image/a.png"></image>
     </view>
-    <view class="nickname_view">名まえ</view>
-    <view class="personality_view">説明</view>
+    <view class="nickname_view">wardenger</view>
+    <view class="personality_view">享受编程，思考生活，拥有变化</view>
   </view>
   <view class="second_style">
   <view class="explain_style">
-  <image class="icon_image"src="/image/a.png" mode="aspectFit"></image>
-  <view class="place_view">担当</view>
+  <image class="icon_image"src="/image/position.png" mode="aspectFit"></image>
+  <view class="place_view">技术总监</view>
   </view>
 
 <view class="explain_style">
-  <image class="icon_image"src="/image/a.png" mode="aspectFit"></image>
-  <view class="place_view">担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当担v当</view>
+  <image class="icon_image"src="/image/introduction.png" mode="aspectFit"></image>
+  <view class="place_view">之前主要是写前端，也了解一点后端，当然还了解一丢丢的设计，现在担任团队技术总监一职。</view>
   </view>
   </view>
 </view>

@@ -4,17 +4,32 @@
   min-height: 100px;
 }
 
-.left_image {
-  width: 40%;
-  height: 50px;
+.left_view {
+  min-width: 40%;
+  min-height: 50px;
+  background-image: url('/image/bg.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   margin-left: 25px;
   margin-top: 25px;
+  text-align: center;
+  display: inline-block;
+  line-height: 50px;
+  font-family: PingFangSC;
+	font-size: 18px;
+	font-weight: 500;
+	color: #ffffff;
 }
 
 .progression_text {
   width: 50%;
   float: right;
   margin-top: 40px;
+  font-family: PingFangSC;
+	font-size: 18.5px;
+	font-weight: 500;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.38);
 }
 .second_style
 {
@@ -25,11 +40,27 @@
 {
   margin: 20px;
 }
+.start_personality_view
+{
+  font-family: PingFangSC;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.54);
+  margin-left: 20px;
+  margin-bottom: 10px;
+  
+}
+.start_tasks_style
+{
+  width: 100%;
+  margin: 20px;
+
+}
 .tab_view {
   width: 33.25%;
   display: inline-block;
   height: 50px;
 }
+
 
 .on {
   color: rgba(0, 0, 180, 0.6);
